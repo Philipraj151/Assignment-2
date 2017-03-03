@@ -1,0 +1,62 @@
+Create a Hadoop cluster in local mode on centos
+Download and install the following:
+
+Pre-requisites:
+1. Virtual Machine -> CentOS, Ubuntu, Debian, Suse, Oracle, RHEL
+the VM shared by me:
+has 1 GB RAM
+has 20 GB HDD
+with Bridged adapter
+can run on VMware workstation
+username/password = root/redhat
+to change the password:
+start the VM and go to the boot screen
+edit the kernel args and enter 1
+enter command # passwd root
+# enter new password
+# confirm it
+# init 6 ---- to restart
+# that's it
+
+2. VMware Workstation
+
+3. centos 6.5 download 32- or 64-bit ISO
+http://mirror.nbrc.ac.in/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-bin-DVD1.iso
+
+4. Centos installation guide:
+http://www.tecmint.com/centos-6-5-installation-guide-with-screenshots/
+http://www.tecmint.com/centos-6-4-installation-guide-with-screenshots/
+
+5. hadoop 1.2.1
+https://archive.apache.org/dist/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
+
+6. JDK 6:
+http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html#jdk-6u45-oth-JPR
+download the bin file:
+jdk-6u45-linux-x64.bin
+
+7. Putty (optional)
+http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe
+
+8. WinSCP
+https://winscp.net/eng/download.php#download2
+
+
+after installing:
+step-1: set network ip configuration / assign it to bridged network
+step-2: copy the from the desired location to linux file/ directory which was created earlier:
+          cp -p/hadoop-1.2.1/hadoop-1.2.1.tar.gz and 
+               /jdk-6u45-linux-x64.bin
+        extract and inflate these files
+         tar -xvzf
+         and
+         chmod +x 
+         take permission and inflat the file
+         jdk-6u45-linux-x64.bin
+ step-3: create link files for both hadoop and jdk
+          ln -s hadoop/jdk
+          
+          
+          done then we are ready to go further .....
+          
+         
